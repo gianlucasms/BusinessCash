@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/money.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/telaConsulta.css">
+    <link rel="stylesheet" href="estilos/telaConsulta.scss">
+
+    <title>Tela | Controle Financeiro</title>
+</head>
+
+<body>
+    <div class="topo"><a href="index.html"><img src="images/money.png" alt="" srcset=""></div></a>
+    <div class="global">
+        <div class="welcome">
+            <h1>Controle Financeiro</h1>
+        </div>
+
+        <div class="quadradosConsultas">
+
+            <div class="entradas">
+                <div class="headerEntradas">
+                    <h4>Entradas</h4>
+                    <img src="images/setaCima.png" alt="" srcset="">
+                </div>
+                <p id="entrada_valor">R$ 0.00</p>
+            </div>
+
+            <div class="saidas">
+                <div class="headerSaidas">
+                    <h4>Saidas</h4>
+                    <img src="images/setaBaixo.png" alt="" srcset="">
+                </div>
+                <p id="saida_valor">R$ 0.00</p>
+            </div>
+
+            <div class="total">
+                <div class="headerTotal">
+                    <h4>Total</h4>
+                    <img src="images/cifrao.png" alt="" srcset="">
+                </div>
+                <p id="total_valor">R$ 0.00</p>
+            </div>
+
+        </div>
+
+        <div class="addFuncao">
+
+            <aside class="descricao">
+
+                <div class="descricaoInput">
+                    <label for="">Descrição</label>
+                    <input type="text" name="Descrição" id="descricao">
+                </div>
+
+                <div class="valorInput">
+                    <label for="valor">Valor</label>
+                    <input type="text" maxlength="20" id="valor" onkeyup="formatarMoeda()">
+                </div>
+
+            </aside>
+
+            <div class="conversao">
+                <label for="">Entradas</label>
+                <input type="checkbox" name="checkbox1" id="entrada">
+                <label for="">Saidas</label>
+                <input type="checkbox" name="checkbox2" id="saida">
+            </div>
+
+            <div class="buttonDiv">
+                <button id="buttonAdd" onclick="adicionarValor()">ADICIONAR</button>
+            </div>
+
+        </div>
+
+        <div class="tableDiv">
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As linhas da tabela serão adicionadas aqui -->
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/checkbox.js"></script>
+    <script src="scripts/valores.js"></script>
+</body>
+
+</html>

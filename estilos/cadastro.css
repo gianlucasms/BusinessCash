@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(153, 165, 248);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divImgCadastro img {
+  margin-top: 10px;
+  width: 100px;
+}
+.mainBox {
+  width: 40%;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+.mainBox h1 {
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+}
+
+.form-row label {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.form-row input,
+.form-row textarea {
+  resize: none;
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#consulteButton {
+  margin-right: 68px;
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  background-color: white;
+  border: 0.4px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#consulteButton:hover {
+  transition: 0.3s;
+  background-color: rgba(128, 128, 128, 0.47);
+  color: rgb(0, 0, 0);
+}
+
+#cep-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btnForm button {
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  background-color: white;
+  border: 0.1px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnForm button:hover {
+  transition: 0.3s;
+  background-color: grey;
+}
+
+.form-row .numero {
+  height: 50px;
+}
+
+textarea {
+  resize: none;
+}

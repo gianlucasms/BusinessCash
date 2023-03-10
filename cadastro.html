@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/money.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/cadastro.css">
+    <link rel="stylesheet" href="estilos/mensagem.css">
+    <title>Cadastro | BusinessCash</title>
+</head>
+
+<body>
+    <div id="mensagem"></div>
+    <div class="main">
+        <div class="divImgCadastro">
+            <a href="index.html"><img src="images/cadastro.png" alt="cadastro"></a>
+        </div>
+        <form id="cep-form" method="post">
+
+            <div class="mainBox">
+                <h1>Cadastre-se</h1>
+            </div>
+
+            <div class="form-row">
+                <label>Login:</label>
+                <input type="text" required onKeyPress="javascript: etqEnter(event,'senhaCadastro')"
+                    placeholder="Crie seu login">
+            </div>
+
+            <div class="form-row">
+                <label>Senha:</label>
+                <input type="password" required id="senhaCadastro" onKeyPress="javascript: etqEnter(event,'email')"
+                    placeholder="Crie sua senha">
+            </div>
+
+            <div class="form-row">
+                <label>Email:</label>
+                <input type="email" id="email" required onKeyPress="javascript: etqEnter(event,'date')"
+                    placeholder="Insira seu Email">
+            </div>
+
+            <div class="form-row">
+                <label>Idade:</label>
+                <input type="date" onKeyPress="javascript: etqEnter(event,'inputCep')" required id="date">
+            </div>
+
+            <div class="form-row">
+                <div class="cep"></div>
+                <label>CEP:</label>
+                <input type="text" onKeyPress="javascript: etqEnter(event,'consulteButton')" required id="inputCep">
+            </div>
+
+            <input type="button" id="consulteButton" value="Consulte" onclick="consultaEndereco(), mostrarDados()">
+
+            <div class="form-row">
+                <label for="rua">Rua:</label>
+                <textarea id="result" required disabled></textarea>
+            </div>
+
+
+            <div class="form-row">
+                <label for="rua">Bairro:</label>
+                <textarea id="result2" required disabled></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="rua">Cidade:</label>
+                <textarea id="result3" required disabled></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="rua">Numero:</label>
+                <input type="text" class="numero" required></textarea>
+            </div>
+
+            <div class="btnForm">
+                <button>Confirmar</button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+    </div>
+    <script type="module" src="scripts/mensagem.js"></script>
+    <script type="module" src="scripts/dateConfig.js"></script>
+    <script src="scripts/requestLogin.js"></script>
+    <script src="scripts/etqEnter.js"></script>
+    <script src="scripts/cepRest.js"></script>
+    <script src="scripts/jquery.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/money.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <title>BusinessCash</title>
+</head>
+
+<body>
+    <div id="mensagem"></div>
+
+    <div class="main">
+
+        <div class="divImg">
+            <img src="images/money.png" alt="" srcset="" />
+        </div>
+        <div class="box">
+            <div class="titleBox">
+                <h1>Login</h1>
+            </div>
+
+            <div class="inputs">
+                <input type="text" id="login" onKeyPress="javascript: etqEnter(event,'senha')" required
+                    placeholder="Digite seu Login" />
+                <input type="password" id="senha" onKeyPress="javascript: etqEnter(event, 'buttonRequest')" required
+                    placeholder="Digite sua Senha" />
+                <a href="#" style="font-size: 13px">Esqueceu sua senha?</a>
+            </div>
+
+            <div class="buttonDiv">
+                <!--Finge que é uma tag button-->
+                <input type="button" id="buttonRequest" onclick="businessCashRequestLogin()" value="Confirmar" />
+            </div>
+
+            <div class="divCadastro">
+                <p style="margin-top: 5px; color: black">Ainda não tem uma conta?</p>
+                <a href="cadastro.html"><input id="buttonCadastro" type="button" value="Cadastre-se" /></a>
+            </div>
+
+            <div class="c-loader" id="loading"></div>
+        </div>
+    </div>
+    <script type="module" src="scripts/mensagem.js"></script>
+    <script type="module" src="scripts/requestLogin.js"></script>
+    <script src="scripts/etqEnter.js"></script>
+    <script src="scripts/pace.min.js"></script>
+    <script src="scripts/jquery.js"></script>
+</body>
+
+</html>
